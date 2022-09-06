@@ -49,7 +49,7 @@
                                                     <a href="<?= base_url() ?>panitia/peserta/detail/<?= $u->peserta_id ?>" class="btn btn-warning btn-sm">
                                                         <i class="mdi mdi-account-edit"></i>
                                                     </a>&emsp;
-                                                    <a href="" data-toggle="modal" data-target="#hapusPesertaModal" class="btn btn-danger btn-sm">
+                                                    <a href="<?= base_url() ?>panitia/peserta/hapusPeserta/<?= $u->peserta_id ?>" onclick="return confirm('Yakin Hapus data')" class="btn btn-danger btn-sm">
                                                         <i class="mdi mdi-delete-forever"></i>
                                                     </a>
                                                 </div>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="modal-footer">
                     <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                    <a href="<?= base_url('panitia/peserta/hapusPeserta/') . $u->peserta_id ?>" class="btn btn-danger">Hapus</a>
+                    <a href="<?= base_url() ?>panitia/peserta/hapusPeserta/<?= $u->peserta_id ?>" class="btn btn-danger">Hapus</a>
                 </div>
             </div>
         </div>

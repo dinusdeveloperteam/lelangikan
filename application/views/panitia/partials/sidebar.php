@@ -43,16 +43,10 @@
                         <a class="nav-link" href="<?= base_url('panitia/pemenang') ?>">Pemenang Lelang</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= base_url('') ?>">Penerima Lelang</a>
+                        <a class="nav-link" href="<?= base_url('panitia/penerima') ?>">Penerima Lelang</a>
                     </li>
                 </ul>
             </div>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('') ?>">
-                <span class="menu-title">Kelola Produk</span>
-                <i class="mdi mdi-equal-box menu-icon"></i>
-            </a>
         </li>
         <li class="nav-item ">
             <a class="nav-link" data-toggle="collapse" href="#pembayaran" aria-expanded="false" aria-controls="ui-basic1">
@@ -84,6 +78,12 @@
                     </li>
                 </ul>
             </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url('') ?>">
+                <span class="menu-title">Riwayat Lelang</span>
+                <i class="mdi mdi-equal-box menu-icon"></i>
+            </a>
         </li>
         <!-- <li class="nav-item ">
             <a class="nav-link" data-toggle="collapse" href="#pengiriman" aria-expanded="false" aria-controls="ui-basic1">

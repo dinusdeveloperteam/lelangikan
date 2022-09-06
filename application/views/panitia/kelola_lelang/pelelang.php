@@ -49,7 +49,7 @@
                                                 <a href="<?= base_url() ?>panitia/pelelang/detail/<?= $i->pelelang_id ?>" class="btn btn-warning btn-sm">
                                                     <i class="mdi mdi-account-edit"></i>
                                                 </a>&emsp;
-                                                <a href="" data-toggle="modal" data-target="#hapusPelelangModal" class="btn btn-danger btn-sm">
+                                                <a href="<?= base_url() ?>panitia/pelelang/hapusPelelang/<?= $i->pelelang_id ?>" onclick="return confirm('Yakin Hapus data')"" class="btn btn-danger btn-sm">
                                                     <i class="mdi mdi-delete-forever"></i>
                                                 </a>
                         </div>
@@ -65,11 +65,11 @@
     </div>
 </div>
 <!-- Modal Delete -->
-<div class="modal fade" id="hapusPelelangModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="hapusPelelangModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -78,10 +78,10 @@
                 <span>Yakin ingin hapus data?</span>
             </div>
             <div class="modal-footer">
-                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                <a href="<?= base_url() ?>panitia/pelelang/hapusPelelang/<?= $i->pelelang_id ?>" class="btn btn-danger">Hapus</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <a href="" class="btn btn-danger">Hapus</a>
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- End Modal Delete -->

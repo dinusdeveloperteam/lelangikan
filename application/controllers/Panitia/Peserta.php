@@ -50,9 +50,9 @@ class Peserta extends CI_Controller
         redirect('panitia/peserta');
     }
 
-    public function hapusPeserta($id)
+    public function hapusPeserta($peserta_id)
     {
-        $this->Panitia->hapusDataPeserta($id);
+        $this->Panitia->hapusDataPeserta($peserta_id);
         redirect('panitia/peserta');
     }
 }

@@ -54,7 +54,7 @@
                                                     <a href="<?= base_url('panitia/pembukaanlelang/detail/') . $row->lelang_id ?>" class="btn btn-warning btn-sm">
                                                         <i class="mdi mdi-details"></i>
                                                     </a>&emsp;
-                                                    <a href="<?= base_url('panitia/pembukaanlelang/hapus/') . $row->lelang_id; ?>" onclick="return confirm('Yakin Hapus data')" class="btn btn-danger btn-sm">
+                                                    <a href="<?= base_url('panitia/pembukaanlelang/hapus/') . $row->lelang_id ?>" onclick="return confirm('Yakin Hapus data')" class="btn btn-danger btn-sm">
                                                         <i class="mdi mdi-delete-forever"></i>
                                                     </a>
                                                 </div>

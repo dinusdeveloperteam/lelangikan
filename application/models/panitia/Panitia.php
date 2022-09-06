@@ -97,5 +97,10 @@ class Panitia extends CI_Model
     {
         return $this->db->delete('lelang', ['lelang_id' => $lelang_id]);
     }
+    function penerima()
+    {
+        $query = "SELECT lp.*,p.*,p.nama,lp.konfirmasi_terimaproduk FROM lelang_pemenang lp,peserta p WHERE lp.peserta_id=p.peserta_id";
+        return $this->db->query($query)->result_array();
+    } 
 
 }
