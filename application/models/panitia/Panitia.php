@@ -7,7 +7,6 @@ class Panitia extends CI_Model
     // kelola dashboard
 
     // kelola pelelang
-
     function pelelang()
     {
         $query = $this->db->get('pelelang');
@@ -87,11 +86,12 @@ class Panitia extends CI_Model
     }
 
     //Kelola Pembayaran
-    function verifikasipembayaran()
+    function pembayaran()
     {
         $query = "SELECT lb.*,lm.*,l.produk,p.nama as nama_peserta FROM lelang_pembayaran lb,lelang_pemenang lm,lelang l,peserta p where lb.lelang_id=lm.lelang_id and lm.peserta_id=p.peserta_id and l.lelang_id=lb.lelang_id;";
         return $this->db->query($query)->result_array();
     }
+
 
     public function hapusDataPembukaanLelang($lelang_id)
     {
@@ -102,5 +102,11 @@ class Panitia extends CI_Model
         $query = "SELECT lp.*,p.*,p.nama,lp.konfirmasi_terimaproduk FROM lelang_pemenang lp,peserta p WHERE lp.peserta_id=p.peserta_id";
         return $this->db->query($query)->result_array();
     } 
+
+    function riwayat()
+    {
+        $query = "SELECT p.peserta_id,p.nama,l.produk,l.harga_beli_sekarang,lp.alamat_kirim,testimoni_pemenang FROM peserta p,lelang l,lelang_pemenang lp WHERE p.peserta_id=lp.peserta_id AND l.lelang_id=lp.lelang_id";
+        return $this->db->query($query)->result_array();
+    }
 
 }

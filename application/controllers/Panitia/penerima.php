@@ -35,14 +35,14 @@ class Penerima extends CI_Controller
     {
         $this->form_validation->set_rules('konfirmasi_terimaproduk', 'Status Order', 'required');
         if ($this->form_validation->run() == false) {
-            redirect('panitia/kelola_lelang/pemenang/');
+            redirect('panitia/penerima/');
         } else {
-            $this->db->set('status', $this->input->post('status', true));
             $this->db->set('konfirmasi_terimaproduk', $this->input->post('konfirmasi_terimaproduk', true));
-            $this->db->where('lelang_id', $id);
+            $this->db->where('peserta_id', $id);
             $this->db->update('lelang_pemenang');
             $this->session->set_flashdata('flash', '<div class="alert alert-success" role="alert">Order Berhasil Terupdate!</div>');
-            redirect('panitia/pemenang/');
+            var_dump($this->db->last_query());
+            redirect('panitia/penerima/');
         }
 
     }

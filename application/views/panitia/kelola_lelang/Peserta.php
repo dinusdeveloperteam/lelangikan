@@ -14,7 +14,8 @@
                             <table id="example" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th>id</th>
+                                        <th>No</th>
+                                        <th>ID Peserta</th>
                                         <th>Nama</th>
                                         <th>provinsi</th>
                                         <th>Kota</th>
@@ -24,9 +25,12 @@
                                 </thead>
                                 <tbody>
                                     <?php
+                                    $count = 0;
                                     foreach ($peserta as $u) {
+                                        $count = $count + 1;
                                     ?>
                                         <tr>
+                                            <td><?= $count ?></td>
                                             <td><?= $u->peserta_id ?></td>
                                             <td><?= $u->nama ?></td>
                                             <td><?= $u->provinsi ?></td>

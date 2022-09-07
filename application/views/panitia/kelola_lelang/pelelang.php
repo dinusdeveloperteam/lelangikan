@@ -11,6 +11,7 @@
                             <table id="example" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
+                                        <th>No</th>
                                         <th> ID </th>
                                         <th> Nama </th>
                                         <th> Provinsi </th>
@@ -22,9 +23,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($pelelang as $i) {
+                                    <?php 
+                                    $count = 0;
+                                    foreach ($pelelang as $i) {
+                                        $count = $count + 1;
                                     ?>
                                         <tr>
+                                            <td><?= $count ?></td>
                                             <td><?= $i->pelelang_id ?></td>
                                             <td><?= $i->nama ?></td>
                                             <td><?= $i->provinsi ?></td>

@@ -14,7 +14,8 @@
                             <table id="example" class="table table-striped table-bordered" style="width:100%">
                                 <thead>
                                     <tr>
-                                        <th width="5%">Lelang ID</th>
+                                        <th>No</th>
+                                        <th>Lelang ID</th>
                                         <th>Produk</th>
                                         <th>Deskripsi Produk</th>
                                         <th>Image 1</th>
@@ -29,8 +30,11 @@
                                 </thead>
                                 <tbody>
                                     <?php
+                                    $count  = 0;
                                     foreach ($PenawaranLelang as $row) {
+                                        $count = $count + 1;
                                     ?>
+                                        <td><?= $count ?></td>
                                         <td><?= $row['lelang_id'] ?></td>
                                         <td><?= $row['produk'] ?></td>
                                         <td><?= $row['deskripsi_produk'] ?></td>

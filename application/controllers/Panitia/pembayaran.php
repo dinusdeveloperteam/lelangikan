@@ -12,8 +12,8 @@ class Pembayaran extends CI_Controller
     public function index()
     {
 
-        $TampilData = $this->Panitia->verifikasipembayaran();
-        $page = 'Verifikasi Pembayaran';
+        $TampilData = $this->Panitia->pembayaran();
+        $page = 'Kelola Pembayaran';
         $data = [
             'lelang_pembayaran' => $TampilData,
             'title' => $page,
@@ -28,17 +28,14 @@ class Pembayaran extends CI_Controller
     public function deletepembayaran($id)
     {
         $this->panitia->deletePembayaran($id);
-        // ayra $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Pembayaran dengan kode ' . $id . ' berhasil dihapus!</div>');
         redirect('panitia/kelola_lelang/pembayaran');
     }
     public function edit($id)
     {
-        // $data['order'] = $this->transaksi->getOrderById($id);
-        $data['id'] = $id;
         $this->form_validation->set_rules('status', 'Status Order', 'required');
-        // $this->form_validation->set_rules('bukti', 'Bukti Transfer Penarikan', 'required');
         if ($this->form_validation->run() == false) {
-            redirect('panitia/kelola_lelang/pembayaran/');
+            redirect('panitia/pembayaran/');
+            return false;
         } else {
             $this->db->set('status', $this->input->post('status', true));
             $this->db->where('lelang_id', $id);
@@ -46,6 +43,5 @@ class Pembayaran extends CI_Controller
             $this->session->set_flashdata('flash', '<div class="alert alert-success" role="alert">Order Berhasil Terupdate!</div>');
             redirect('panitia/pembayaran/');
         }
-
     }
 }

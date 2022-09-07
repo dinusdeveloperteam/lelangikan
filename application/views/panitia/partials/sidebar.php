@@ -80,7 +80,7 @@
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="<?php echo base_url('') ?>">
+            <a class="nav-link" href="<?php echo base_url('panitia/riwayat') ?>">
                 <span class="menu-title">Riwayat Lelang</span>
                 <i class="mdi mdi-equal-box menu-icon"></i>
             </a>
